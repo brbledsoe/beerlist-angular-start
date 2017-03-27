@@ -1,0 +1,52 @@
+.page-header {
+  border: none;
+}
+.beer-form {
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+.beers {
+  padding-right: 30px;
+}
+
+.beers-header {
+  margin-bottom: 46px;
+}
+
+.beer {
+  padding: 25px 5px 10px 0px;
+  border-radius: 3.5px 3.5px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+  margin-bottom: 16px;
+}
+
+.beer-info {
+  background-color: #f7f7f7; 
+}
+
+.beer-name {
+  font-style:italic;
+}
+
+.details{
+  text-align: center;
+}
+
+.details i {
+  font-size: 73px;
+  padding-top: 23px;
+}
+
+.details a {
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
+.details .trash:hover {
+  color: tomato;
+}
+
+.details .reviews:hover {
+  color: #0091ff;
+}

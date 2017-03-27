@@ -1,0 +1,48 @@
+<div class="row">
+            <div class="col-md-3 beer-form">
+                <div class="page-header">
+                </div>
+                <!-- render beers here -->
+                <form ng-submit="addBeer(newBeer)">
+                    <h3>Add a new beer</h3>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Beer Name" ng-model="newBeer.name"></input>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Style" ng-model="newBeer.style"></input>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="ABV" ng-model="newBeer.abv"></input>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Image URL" ng-model="newBeer.image"></input>
+                    </div>
+                    <button type="submit" class="btn btn-primary col-md-offset-10">Add</button>
+                </form>
+            </div>
+
+            <!-- below goes beers -->
+            <div class="col-md-9 beers">
+                <h1 class="beers-header">BeerList</h1>
+
+                <!-- our beer temp -->
+                <div class="col-md-12 beer" ng-repeat="beer in beers track by $index">
+                   <img class="col-md-2" src="{{beer.image}}"/>
+                   <div class="col-md-9 beer-info">
+                     <h2 class="col-md-12 beer-name">{{beer.name}}</h2>
+                     <h3 class="col-md-12">{{beer.style}} : {{beer.abv}}% alc</h3>
+                   </div>
+                   <div class="col-md-1 details">
+                    <a href="#" ng-click="removeBeer(beer)">
+                     <i class="trash fa fa-trash-o" aria-hidden="true"></i>
+                    </a>
+                    <a ui-sref="beer({id: beer._id, beerParam: beer, test: 'howdy'})" class="reviews">Reviews</a>
+                   </div>
+
+                   
+               </div>
+
+
+            </div>
+
+        </div>
